@@ -39,9 +39,13 @@ while True:
     
     # LangChain burada devreye giriyor:
     # Soruyu al -> Dosyada cevabı bul -> GPT ile cümle kur -> Cevap ver
-    try:
-        cevap = qa_zinciri.invoke(soru)
-        # LangChain bazen cevabı 'result' içinde döndürür
-        print(f"Bot: {cevap['result']}")
-    except Exception as e:
-        print(f"Hata: {e}")
+      # ... önceki kodlar ...
+
+# LangChain burada devreye giriyor:
+try:  # <--- Kapı (En solda)
+    print(f"--- 1. Kullanıcıdan gelen soru: {soru}")      # <--- İçeride (TAB)
+    cevap = qa_zinciri.invoke(soru)                        # <--- İçeride (TAB)
+    print(f"--- 2. Yapay Zekadan gelen paket: {cevap}")    # <--- İçeride (TAB)
+    print(f"--- 3. Temiz cevap: {cevap['result']}")        # <--- İçeride (TAB)
+except Exception as e: # <--- Kapı kapandı (Tekrar en sola döndü)
+    print(f"Hata: {e}")                                    # <--- İçeride (TAB)
