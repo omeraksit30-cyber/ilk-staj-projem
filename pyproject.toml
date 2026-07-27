@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "restaurant-support-knowledge-assistant"
+version = "2.0.0"
+description = "A fictional, educational restaurant-support retrieval application."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { file = "LICENSE" }
+authors = [{ name = "Portfolio Project Contributor" }]
+dependencies = [
+  "openai==2.14.0",
+  "pydantic-settings==2.11.0",
+  "scikit-learn==1.7.2",
+  "streamlit==1.50.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pip-audit==2.9.0",
+  "pytest==8.4.2",
+  "ruff==0.14.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/restaurant_support_assistant"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+exclude = [".git", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106"]
