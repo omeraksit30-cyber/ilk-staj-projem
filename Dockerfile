@@ -11,7 +11,7 @@ RUN groupadd --system app && useradd --system --gid app --home-dir /app app
 
 COPY pyproject.toml README.md LICENSE ./
 COPY src ./src
-RUN python -m pip install --upgrade pip==25.2 \
+RUN python -m pip install --upgrade pip==26.1.2 \
     && python -m pip install .
 
 COPY app.py ./

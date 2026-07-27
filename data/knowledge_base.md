@@ -19,10 +19,10 @@ Medical decisions should be discussed with a qualified professional.
 
 ## Reservation Policy
 
-Reservations in this fictional example may be requested for groups of up to eight.
-Requests can be changed or cancelled through the same fictional booking channel.
-A request is not confirmed until the guest receives a confirmation message.
-Walk-in seating depends on availability.
+Reservations let guests reserve a table for a group of up to eight in this fictional
+example. Reservation requests can be changed or cancelled through the same fictional
+booking channel. A request is not confirmed until the guest receives a confirmation
+message. Walk-in seating depends on availability.
 
 ## Sprout Points Loyalty Program
 
