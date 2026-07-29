@@ -82,6 +82,22 @@ commit a local `.env` file.
 Additional code-level safeguards bound the knowledge-base file to 100,000 bytes and
 individual chunks to 1,500 characters.
 
+## Streamlit Community Cloud deployment
+
+Use these deployment settings:
+
+- Repository: `omeraksit30-cyber/ilk-staj-projem`
+- Branch: `main`
+- Entrypoint: `app.py`
+- Python: `3.12`
+
+The root `requirements.txt` intentionally contains an editable local package install
+so Streamlit Community Cloud selects its pip/uv installation path. `pyproject.toml`
+and Hatchling remain authoritative for the package metadata and pinned dependencies.
+`OPENAI_API_KEY` is optional; without it, the app runs in offline local retrieval
+mode. Configure optional secrets only in the deployment platform and never commit
+them to the repository. This section does not claim that deployment has succeeded.
+
 ## Quality commands
 
 ```bash
