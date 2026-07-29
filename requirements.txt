@@ -1,0 +1,2 @@
+# Streamlit Community Cloud prioritizes this pip/uv installation entrypoint.
+-e .
